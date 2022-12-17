@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "UntitledAI",
+    "slug": "UntitledAI",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
