@@ -11,5 +11,8 @@
         "projectId": "3eba1e3d-bdad-438a-80de-38baafe5cb4e"
       }
     }
+  },
+  "ios": {
+    "GoogleService-Info.plist": "ios/GoogleService-Info.plist"
   }
 }
