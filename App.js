@@ -32,7 +32,7 @@ class App extends Component {
       <Title2>"What role does geometry play in theoretical physics?"</Title2>
       </View>
       <View style={styles.container}>
-      <Title2>"How to build an app that teaches people about philosophy?"</Title2>
+      <Title2>"How to build an app that teaches  about philosophy?"</Title2>
       </View>
       </PageControlView>
       </View>
@@ -44,6 +44,7 @@ class App extends Component {
       animated
       />
       </View>
+        <Text> {this.state.text}</Text>
       <StatusBar style="auto" />
       </View>
     );
