@@ -8,39 +8,31 @@ import { DefaultTheme, ThemeProvider } from 'react-native-ios-kit';
 import color from 'color';
 import { KeyboardAvoidingView } from 'react-native';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       text: '',
-      pages: [
-        {
-          title: 'First page',
-          content: 'This is the content for the first page',
-        },
-        {
-          title: 'Second page',
-          content: 'This is the content for the second page',
-        },
-        {
-          title: 'Third page',
-          content: 'This is the content for the third page',
-        },
-      ],
+      pages: [],
+      currentPage: 0,
     };
   }
   
-addPage = text => {
-  this.setState(prevState => ({
-    pages: [
-      ...prevState.pages,
-      {
-        title: text,
-        content: 'This is the content for the new page',
-      },
-    ],
-  }));
-};
+  addPage = () => {
+    this.setState(prevState => ({
+      pages: [
+        ...prevState.pages,
+        {
+          title: this.state.text,
+          content: 'This is the content for the new page',
+        },
+      ],
+      currentPage: 2, // Set the current page to the last element
+    }));
+    this.setState({ text: '' })
+  };
+  
 
 
   render() {
@@ -48,7 +40,7 @@ addPage = text => {
       <SafeAreaView style={styles.container}>
         <KeyboardAvoidingView style={styles.container} behavior="padding">
           <View style={{ flex: 0.92 }}>
-            <PageControlView defaultPage={1}>
+            <PageControlView defaultPage={2}>
               {this.state.pages.map(page => (
                 <View style={styles.container}>
                   <Title1>{page.title}</Title1>
@@ -60,11 +52,12 @@ addPage = text => {
           <View style={{ flex: 0.08 }}>
             <SearchBar
               value={this.state.text}
-              onValueChange={this.addPage}
+              onValueChange={text => this.setState({ text })}
+              onBlur={this.addPage}
               withCancel
               animated={true}
             />
-          </View>
+                     </View>
           <StatusBar style="auto" />
         </KeyboardAvoidingView>
       </SafeAreaView> 
@@ -82,6 +75,8 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+
 
 
 

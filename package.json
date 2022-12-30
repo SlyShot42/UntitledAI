@@ -18,8 +18,12 @@
     "firebase": "^9.15.0",
     "react": "18.1.0",
     "react-native": "0.70.5",
+    "react-native-elements": "^3.4.3",
     "react-native-ios-kit": "^0.0.22",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-paper": "^5.1.2",
+    "react-native-ui-lib": "^6.27.1",
+    "react-native-vector-icons": "^9.2.0",
+    "rn-viewpager": "^1.2.9"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
