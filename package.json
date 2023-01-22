@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
     "color": "^4.2.3",
     "expo": "~47.0.8",
     "expo-firebase-app": "^2.0.0",
@@ -25,10 +26,11 @@
     "react-native-keyboard-tracking-view": "^5.7.0",
     "react-native-paper": "^5.1.2",
     "react-native-reanimated": "~2.12.0",
+    "react-native-snap-carousel": "4.0.0-beta.6",
     "react-native-ui-lib": "^6.27.3",
     "react-native-vector-icons": "^9.2.0",
     "rn-viewpager": "^1.2.9",
-    "@expo/vector-icons": "^13.0.0"
+    "expo-haptics": "~12.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
